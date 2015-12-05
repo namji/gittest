@@ -1,0 +1,33 @@
+/*http://css-snippets.com/drop-down-navigation */
+/* https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes */
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ccc;
+}
+
+.navbar-custom {
+background-color:  #FF0000;
+color: #FFFFFF;
+
+}
+
+.navbar-custom  a{
+color: #FFFFFF;
+
+}
+
+.navbar-custom  a:hover{
+color: #FF0000;
+background-color: #FFFFFF
+
+}
+
+.navbar-custom  a:active{
+color: #FF0000;
+background-color: #FFFFFF
+
+}
+

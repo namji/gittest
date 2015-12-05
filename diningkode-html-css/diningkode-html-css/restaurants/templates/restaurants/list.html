@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>DiningKode Restaurants</title>
+    <meta name="description" content="DiningKode">
+    <meta name="author" content="You!">
+    <link rel="stylesheet" href="{% static 'restaurants/css/style.css' %}">
+    <!-- For box model http://codepen.io/collection/DVYVpB/ -->
+</head>
+
+<body>
+
+     <nav>
+      <ul>
+        <li><a href="/" >Home</a></li>
+        <li><a href="/list/" class="active" >Restaurants</a>
+          <ul>
+            <li><a href="#">MCDonalds</a></li>
+            <li><a href="#">KFC</a></li>
+            <li><a href="#">BurgerKing</a></li>
+          </ul>
+        </li>
+        <li><a href="#" >Rating</a>
+          <ul>
+            <li><a href="/rating/5">5</a></li>
+            <li><a href="/rating/4">4</a></li>
+            <li><a href="/rating/3">3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    </header>
+
+       <div class="mainbox">
+           {% for resto in restaurants %}
+               <div class="card">
+              <a href="/{{resto.name}}"> <img src="{{ resto.image }}" width="300"> </a> 
+              <a href="/{{resto.name}}"><h1>{{resto.name}}</h1></a>
+              <p>rating: {{ resto.rating }}</p>
+               <p>phone: {{ resto.phone_number }}</p>
+                <p>address: {{ resto.address }}</p>
+                </div>
+            {% endfor %}
+       </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>DiningKode</title>
+    <meta name="description" content="DiningKode">
+    <meta name="author" content="You!">
+
+ <!-- TODO:  Move this code to CSS ? Add CSS link here --> 
+
+    <style>
+        html, body, div, form, fieldset, legend, label {
+         margin: 0;
+         padding: 0; 
+        }
+        header {
+            height: 50px;
+            background-color: red;
+        }
+        header div {
+            text-align: center;
+            padding-top: 15px;
+        }
+        header div a {
+            color: white;
+        }
+        main {
+            width: 800px;
+            margin: auto;
+            text-align: center
+        }
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+ <!-- TODO:  Change following to a good design! --> 
+ <!-- Copy Navbar from index.html  --> 
+    <header>
+    <div>
+        <a href="/">Home</a>
+
+    </div>
+    </header>
+    <main>
+        <section>
+                <a href="/{{restaurant.name}}">
+                    <img src="{{ restaurant.image }}" alt="" width="300">
+                </a>
+                <ul>
+                    <li>
+                        <a href="/{{restaurant.name}}">{{restaurant.name}}</a>
+                    </li>
+                    <li>rating: {{ restaurant.rating }}</li>
+                    <li>phone: {{ restaurant.phone_number }}</li>
+                    <li>address: {{ restaurant.address }}</li>
+                </ul>
+        </section>
+        <section>
+            <h2>Reviews</h2>
+            <ul>
+            {% for review in reviews %}
+            <li>
+                {{ review.review_text }}     
+                by: {{ review.author.username }}
+            </li>
+
+            {% endfor %}
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

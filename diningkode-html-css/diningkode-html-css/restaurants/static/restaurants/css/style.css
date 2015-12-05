@@ -1,0 +1,172 @@
+/*http://css-snippets.com/drop-down-navigation */
+/* https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes */
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+body {
+  margin : auto 0;
+  background: #ccc;
+}
+
+nav ul {
+  list-style: none;
+  background-color: #FF7012;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+    width: 20%;
+    border-right: 3px solid white;
+    height: 50px;
+    line-height: 50px;
+    font-size: 140%;
+    display: inline-block;
+    margin-right: -4px;
+  }
+
+nav li:last-child{
+	    border-right: none;
+}
+
+nav li li{
+	    border-right: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding-left: 15px;
+}
+
+nav a:hover {
+  background-color: #FFBB00;
+}
+
+nav a.active {
+  background-color: #ffffff;
+  color: #444;
+  cursor: default;
+}
+
+/* Sub Menus */
+nav li li {
+  font-size: .8em;
+}
+
+nav > ul > li {
+   text-align: center;
+}
+
+nav > ul > li > a {
+    padding-left: 0;
+}
+
+/* Sub Menus */
+nav li ul {
+    position: absolute;
+    display: none;
+    width: inherit;
+}
+
+nav li:hover ul {
+   display: block;
+}
+
+nav li ul li {
+   display: block;
+ }
+
+/* Card View */
+
+
+.card{
+width: 340px;
+border: 1px solid gray;
+box-shadow: 1px 1px 3px #888;
+border-top: 10px solid #FF7012;
+min-height: 250px;
+padding-: 10px;
+margin: 10px;
+}
+
+/* TODO: */
+
+.card a img {
+
+  width: 100%;
+  /*margin: ?px;*/
+}
+
+h1 {
+   text-align: left;
+   margin-left: 30px;
+
+}
+
+p {
+
+  margin-left: 30px;
+  /* make it more elegant */
+}
+
+.mainbox{
+  font-family: calibri;
+  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+/* TODO */
+
+.card a {
+
+   /*text-decoration: ?;*/
+   /*color: ?;*/
+
+}
+
+.card a:hover {
+
+ /* color: ;*/
+}
+
+
+.imgdiv {
+  width: 100%;
+  margin: -140px auto 0 auto;
+}
+
+.title_div{
+  position: relative;
+  top: 300px;
+  left: 120px;
+  width: 500px;
+  margin-bottom: 25px;
+}
+
+.title {
+  color : #FFFFFF;
+  font-size: 75px;
+  margin: 50px auto;
+  font-family: sans-serif;
+  display: inline;
+}
+
+.title_first {
+  color :  #FF5E00;
+  font-family: sans-serif;
+  font-size: 100px;
+  display: inline;
+  font-weight: bold;
+
+}
+
+.nemo {
+  background-color:#353535;
+  width: 100%;
+  height: 30px;
+}

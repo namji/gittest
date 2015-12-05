@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DiningKode</title>
+	<link rel="stylesheet" href="{% static 'restaurants/css/style.css' %}">
+
+</head>
+<body>
+ <header>
+    <nav>
+      <ul>
+        <li><a href="/" class="active" >Home</a></li>
+        <li><a href="/list/">Restaurants</a></li>
+       <li><a href="#" >Rating</a>
+          <ul>
+            <li><a href="#">5</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    </header>
+
+
+		<div class="imgdiv">
+			<div class="title_div">
+				<p class="title_first"> D</p>
+				<p class="title">ingingKode </p>
+			</div>
+			<div class="nemo">
+			</div>
+		<img width="100%"src="{% static 'restaurants/images/food_main.jpg' %}">
+	  </div>
+
+<footer>
+	<nav>
+		<a href="">About us</a>
+	</nav>
+</footer>
+
+</body>
+</html>
